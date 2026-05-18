@@ -732,14 +732,27 @@
   border-radius: 12px;
   object-fit: cover;
   display: block;
-}  
-  </style>
+}  .logo-hero {
+  display: grid;
+  place-items: center;
+  min-height: 560px;
+  background:
+    radial-gradient(circle at center, rgba(0, 170, 255, 0.22), transparent 45%),
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035));
+}
+
+.hero-logo-img {
+  width: min(82%, 460px);
+  max-height: 460px;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 60px rgba(0, 170, 255, 0.30));
+}  </style>
 </head>
 <body>
   <nav class="nav">
     <a class="logo" href="#top" aria-label="HS Detailing Bern Startseite">
-    <img src="Logo.JPG" alt="HS Detailing Logo" class="nav-logo-img">
-      <span>HS Detailing</span>
+<span class="logo-mark">HS</span>
+<span>HS Detailing</span>
     </a>
     <div class="nav-links" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
@@ -779,25 +792,9 @@
           </div>
         </div>
 
-        <div class="visual-card" aria-label="Visualisierung eines gereinigten Autoinnenraums">
-          <div class="car-interior">
-            <div class="dashboard"></div>
-            <div class="steering"></div>
-            <div class="seat-left"></div>
-            <div class="seat-right"></div>
-            <div class="shine"></div>
-          </div>
-          <div class="floating-score">
-            <div class="mini">
-              <small>Fokus</small>
-              <strong>Detailarbeit</strong>
-            </div>
-            <div class="mini">
-              <small>Ergebnis</small>
-              <strong>Frisch & gepflegt</strong>
-            </div>
-          </div>
-        </div>
+  <div class="visual-card logo-hero" aria-label="HS Detailing Logo">
+  <img src="Logo.JPG" alt="HS Detailing Logo" class="hero-logo-img">
+</div>
       </div>
     </section>
 
