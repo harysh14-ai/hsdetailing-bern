@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HS Detailing Bern | Premium Interior Detailing</title>
+  <meta name="description" content="HS Detailing Bern bietet professionelle Innenraumreinigung für Autos in Bern und Umgebung. Gründlich, sauber und mit hochwertigen Produkten von Koch Chemie und Sonax." />
+  <meta name="keywords" content="Interior Detailing Bern, Autoinnenreinigung Bern, Fahrzeug Innenreinigung, Auto Aufbereitung Bern, HS Detailing" />
+  <meta name="author" content="HS Detailing Bern" />
+
+  <meta property="og:title" content="HS Detailing Bern | Premium Interior Detailing" />
+  <meta property="og:description" content="Professionelle Innenraumreinigung für dein Auto in Bern und Umgebung." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hsdetailing-bern.ch" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #07090d;
+      --bg-soft: #0d1118;
+      --card: rgba(255, 255, 255, 0.065);
+      --card-strong: rgba(255, 255, 255, 0.105);
+      --text: #f5f7fb;
+      --muted: #a8b0bf;
+      --line: rgba(255, 255, 255, 0.13);
+      --brand: #d7ff3f;
+      --brand-2: #9cffd1;
+      --danger: #ff6b6b;
+      --shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+      --radius: 28px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(215, 255, 63, 0.18), transparent 33%),
+        radial-gradient(circle at top right, rgba(156, 255, 209, 0.12), transparent 34%),
+        linear-gradient(180deg, #07090d 0%, #0a0d12 45%, #050608 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      position: fixed;
+      top: 18px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(var(--max), calc(100% - 32px));
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(7, 9, 13, 0.72);
+      backdrop-filter: blur(22px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+    }
+
+    .logo-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 13px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #050608;
+      font-weight: 900;
+      box-shadow: 0 0 34px rgba(215, 255, 63, 0.28);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .nav-cta,
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      background: var(--brand);
+      color: #050608;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 18px 45px rgba(215, 255, 63, 0.19);
+    }
+
+    .btn:hover,
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 60px rgba(215, 255, 63, 0.29);
+    }
+
+    .btn.secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text);
+      border: 1px solid var(--line);
+      box-shadow: none;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      align-items: center;
+      padding: 150px 0 80px;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.055);
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .pulse {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--brand);
+      box-shadow: 0 0 0 7px rgba(215, 255, 63, 0.12);
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 88px);
+      line-height: 0.94;
+      letter-spacing: -0.075em;
+      font-weight: 950;
+      margin-bottom: 24px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 15%, var(--brand) 55%, var(--brand-2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: var(--muted);
+      font-size: 18px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 38px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 670px;
+    }
+
+    .trust-card {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.045);
+      border-radius: 20px;
+      padding: 16px;
+    }
+
+    .trust-card strong {
+      display: block;
+      font-size: 20px;
+      letter-spacing: -0.04em;
+    }
+
+    .trust-card span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .visual-card {
+      position: relative;
+      min-height: 620px;
+      border: 1px solid var(--line);
+      border-radius: 38px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.035)),
+        radial-gradient(circle at top, rgba(215,255,63,0.18), transparent 40%);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      padding: 24px;
+    }
+
+    .car-interior {
+      height: 100%;
+      min-height: 570px;
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)),
+        radial-gradient(circle at 50% 28%, rgba(215,255,63,0.24), transparent 20%),
+        linear-gradient(160deg, #151922 0%, #050608 68%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .steering {
+      position: absolute;
+      width: 250px;
+      height: 250px;
+      border: 24px solid rgba(255,255,255,0.16);
+      border-radius: 50%;
+      left: 50%;
+      top: 45%;
+      transform: translate(-50%, -50%);
+      box-shadow: inset 0 0 40px rgba(0,0,0,0.75), 0 30px 80px rgba(0,0,0,0.55);
+    }
+
+    .steering::before,
+    .steering::after {
+      content: "";
+      position: absolute;
+      background: rgba(255,255,255,0.12);
+      border-radius: 999px;
+    }
+
+    .steering::before {
+      width: 120px;
+      height: 20px;
+      left: 42px;
+      top: 92px;
+    }
+
+    .steering::after {
+      width: 24px;
+      height: 102px;
+      left: 89px;
+      top: 98px;
+      transform: rotate(18deg);
+    }
+
+    .dashboard {
+      position: absolute;
+      left: 9%;
+      right: 9%;
+      top: 22%;
+      height: 92px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .seat-left,
+    .seat-right {
+      position: absolute;
+      width: 165px;
+      height: 300px;
+      bottom: -48px;
+      border-radius: 46px 46px 18px 18px;
+      background: linear-gradient(160deg, rgba(255,255,255,0.16), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .seat-left { left: 6%; transform: rotate(-9deg); }
+    .seat-right { right: 6%; transform: rotate(9deg); }
+
+    .shine {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(110deg, transparent 0%, rgba(255,255,255,0.09) 35%, transparent 60%);
+      transform: translateX(-100%);
+      animation: shine 5s infinite;
+    }
+
+    @keyframes shine {
+      0%, 55% { transform: translateX(-100%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .floating-score {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      right: 24px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .mini {
+      border: 1px solid var(--line);
+      background: rgba(7, 9, 13, 0.74);
+      backdrop-filter: blur(18px);
+      border-radius: 22px;
+      padding: 16px;
+    }
+
+    .mini small {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .mini strong {
+      display: block;
+      margin-top: 4px;
+      font-size: 22px;
+      letter-spacing: -0.05em;
+    }
+
+    section {
+      padding: 92px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(34px, 4vw, 58px);
+      line-height: 1;
+      letter-spacing: -0.065em;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      max-width: 470px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card,
+    .price-card,
+    .step-card,
+    .faq-item,
+    .contact-card {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+    }
+
+    .service-card:hover,
+    .price-card:hover,
+    .step-card:hover {
+      background: var(--card-strong);
+      transform: translateY(-3px);
+      transition: 0.22s ease;
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: rgba(215, 255, 63, 0.13);
+      color: var(--brand);
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3,
+    .price-card h3,
+    .step-card h3 {
+      font-size: 22px;
+      letter-spacing: -0.04em;
+      margin-bottom: 10px;
+    }
+
+    .service-card p,
+    .step-card p,
+    .faq-item p {
+      color: var(--muted);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      height: 100%;
+    }
+
+    .compare-card {
+      min-height: 380px;
+      border-radius: 32px;
+      border: 1px solid var(--line);
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(160deg, rgba(255,255,255,0.08), rgba(255,255,255,0.025));
+    }
+
+    .compare-card.before {
+      filter: saturate(0.65);
+    }
+
+    .compare-card.after {
+      background:
+        radial-gradient(circle at top right, rgba(215,255,63,0.16), transparent 35%),
+        linear-gradient(160deg, rgba(255,255,255,0.11), rgba(255,255,255,0.03));
+    }
+
+    .compare-label {
+      display: inline-flex;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(0,0,0,0.45);
+      border: 1px solid var(--line);
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+    }
+
+    .dirt,
+    .clean {
+      position: absolute;
+      left: 18%;
+      right: 18%;
+      bottom: 40px;
+      height: 210px;
+      border-radius: 34px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.11), rgba(255,255,255,0.025));
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .dirt::before {
+      content: "";
+      position: absolute;
+      inset: 18px;
+      border-radius: 25px;
+      background-image: radial-gradient(rgba(180,145,92,0.75) 1.5px, transparent 1.5px);
+      background-size: 17px 17px;
+      opacity: 0.65;
+    }
+
+    .clean {
+      box-shadow: inset 0 0 50px rgba(215,255,63,0.08), 0 24px 70px rgba(0,0,0,0.45);
+    }
+
+    .clean::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 34px;
+      background: linear-gradient(110deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-80%);
+      animation: shine 4s infinite;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .price-card.featured {
+      background:
+        radial-gradient(circle at top right, rgba(215,255,63,0.18), transparent 32%),
+        rgba(255,255,255,0.095);
+      border-color: rgba(215,255,63,0.32);
+      position: relative;
+    }
+
+    .price-tag {
+      font-size: 44px;
+      letter-spacing: -0.07em;
+      font-weight: 950;
+      margin: 18px 0 8px;
+    }
+
+    .price-tag span {
+      color: var(--muted);
+      font-size: 15px;
+      letter-spacing: 0;
+      font-weight: 700;
+    }
+
+    .price-card ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      margin: 22px 0 26px;
+      color: var(--muted);
+    }
+
+    .price-card li::before {
+      content: "✓";
+      color: var(--brand);
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      counter-reset: steps;
+    }
+
+    .step-card {
+      counter-increment: steps;
+    }
+
+    .step-card::before {
+      content: "0" counter(steps);
+      display: inline-flex;
+      margin-bottom: 24px;
+      font-size: 13px;
+      font-weight: 950;
+      color: #050608;
+      background: var(--brand);
+      border-radius: 999px;
+      padding: 7px 10px;
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .faq-item h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: -0.03em;
+    }
+
+    .contact {
+      padding-bottom: 46px;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      background:
+        radial-gradient(circle at top left, rgba(215,255,63,0.20), transparent 28%),
+        rgba(255,255,255,0.075);
+    }
+
+    .contact-card h2 {
+      font-size: clamp(34px, 5vw, 66px);
+      line-height: 0.98;
+      letter-spacing: -0.07em;
+      margin-bottom: 18px;
+    }
+
+    .contact-card p {
+      color: var(--muted);
+      margin-bottom: 26px;
+      max-width: 650px;
+    }
+
+    .contact-box {
+      border: 1px solid var(--line);
+      background: rgba(0,0,0,0.22);
+      border-radius: 24px;
+      padding: 22px;
+    }
+
+    .contact-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .contact-line:last-child {
+      border-bottom: 0;
+    }
+
+    .contact-line strong {
+      color: var(--text);
+    }
+
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 26px 0 34px;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links { display: none; }
+      .hero-grid,
+      .split,
+      .contact-card {
+        grid-template-columns: 1fr;
+      }
+      .visual-card { min-height: 520px; }
+      .grid-3,
+      .price-grid,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+      .section-head {
+        display: block;
+      }
+      .section-head p {
+        margin-top: 14px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width: min(100% - 26px, var(--max)); }
+      .nav {
+        top: 10px;
+        width: calc(100% - 18px);
+      }
+      .nav-cta { display: none; }
+      .hero { padding-top: 120px; }
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; }
+      .trust-row,
+      .grid-3,
+      .price-grid,
+      .steps,
+      .faq-grid,
+      .before-after,
+      .floating-score {
+        grid-template-columns: 1fr;
+      }
+      .visual-card { min-height: 480px; padding: 16px; }
+      .car-interior { min-height: 440px; }
+      .steering { width: 190px; height: 190px; }
+      section { padding: 68px 0; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="#top" aria-label="HS Detailing Bern Startseite">
+      <span class="logo-mark">HS</span>
+      <span>HS Detailing</span>
+    </a>
+    <div class="nav-links" aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#kontakt">Kontakt</a>
+    </div>
+    <a class="nav-cta" href="https://wa.me/41779127174" target="_blank" rel="noopener">Termin anfragen</a>
+  </nav>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge"><span class="pulse"></span> Interior Detailing in Bern & Umgebung</div>
+          <h1>Dein Innenraum. <span class="gradient-text">Wieder wie neu.</span></h1>
+          <p>
+            Professionelle Autoinnenreinigung mit Fokus auf sichtbare Sauberkeit, gepflegte Oberflächen und einen frischen Innenraum. Kein schnelles Drüberwischen — sondern saubere Detailarbeit mit hochwertigen Produkten.
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="https://wa.me/41779127174" target="_blank" rel="noopener">Jetzt per WhatsApp anfragen</a>
+            <a class="btn secondary" href="#preise">Preise ansehen</a>
+          </div>
+          <div class="trust-row">
+            <div class="trust-card">
+              <strong>Innenraum</strong>
+              <span>Sitze, Teppiche, Cockpit, Türen</span>
+            </div>
+            <div class="trust-card">
+              <strong>Premium</strong>
+              <span>Koch Chemie & Sonax Produkte</span>
+            </div>
+            <div class="trust-card">
+              <strong>Bern</strong>
+              <span>Sauberer Service in deiner Nähe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="visual-card" aria-label="Visualisierung eines gereinigten Autoinnenraums">
+          <div class="car-interior">
+            <div class="dashboard"></div>
+            <div class="steering"></div>
+            <div class="seat-left"></div>
+            <div class="seat-right"></div>
+            <div class="shine"></div>
+          </div>
+          <div class="floating-score">
+            <div class="mini">
+              <small>Fokus</small>
+              <strong>Detailarbeit</strong>
+            </div>
+            <div class="mini">
+              <small>Ergebnis</small>
+              <strong>Frisch & gepflegt</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="leistungen">
+      <div class="container">
+        <div class="section-head">
+          <h2>Was dein Auto bekommt.</h2>
+          <p>Ein sauberer Innenraum ist nicht nur Optik. Er fühlt sich besser an, riecht besser und macht dein Fahrzeug wertiger.</p>
+        </div>
+        <div class="grid-3">
+          <article class="service-card">
+            <div class="icon">✦</div>
+            <h3>Gründliches Saugen</h3>
+            <p>Sitze, Fussraum, Teppiche, Kofferraum, Ritzen und schwer erreichbare Stellen werden sauber ausgesaugt.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">◈</div>
+            <h3>Cockpit & Kunststoffpflege</h3>
+            <p>Armaturen, Mittelkonsole, Türverkleidungen und Kunststoffflächen werden gereinigt und gepflegt.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">☰</div>
+            <h3>Displays & Glas innen</h3>
+            <p>Displays, Spiegel und Innenfenster werden streifenarm gereinigt, damit der Innenraum klarer wirkt.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">♢</div>
+            <h3>Stoff & Polster</h3>
+            <p>Leichte Polsterreinigung für Sitze, Stoffflächen und Teppiche. Bei starker Verschmutzung mit Nasssauger möglich.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">◎</div>
+            <h3>Geruchskiller</h3>
+            <p>Frischer Innenraum statt überdeckter Gerüche. Ideal nach Alltag, Essen, Rauchgeruch oder Haustieren.</p>
+          </article>
+          <article class="service-card">
+            <div class="icon">⌁</div>
+            <h3>Extras nach Bedarf</h3>
+            <p>Lederpflege, gezielte Dampfreinigung oder intensivere Tiefenreinigung können separat gebucht werden.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container split">
+        <div>
+          <div class="section-head" style="margin-bottom: 18px;">
+            <h2>Kein Billig-Look. Sondern sauberer Auftritt.</h2>
+          </div>
+          <p style="color: var(--muted); margin-bottom: 24px;">
+            Viele Autoreinigungen sehen online gleich aus: Stock-Fotos, leere Versprechen und Preise ohne Klarheit. HS Detailing Bern soll anders wirken: ehrlich, hochwertig und direkt verständlich.
+          </p>
+          <a class="btn" href="#kontakt">Anfrage starten</a>
+        </div>
+        <div class="before-after" aria-label="Vorher Nachher Visualisierung">
+          <div class="compare-card before">
+            <span class="compare-label">BEFORE</span>
+            <div class="dirt"></div>
+          </div>
+          <div class="compare-card after">
+            <span class="compare-label">AFTER</span>
+            <div class="clean"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="preise">
+      <div class="container">
+        <div class="section-head">
+          <h2>Klare Preise. Keine Spielchen.</h2>
+          <p>Die Preise sind Startpreise. Bei extremem Schmutz, Tierhaaren oder starkem Geruch wird der Aufwand vorher fair besprochen.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card">
+            <h3>Basic Interior</h3>
+            <p style="color: var(--muted);">Für normal verschmutzte Innenräume.</p>
+            <div class="price-tag">ab 70 CHF</div>
+            <ul>
+              <li>Innenraum saugen</li>
+              <li>Cockpit & Mittelkonsole</li>
+              <li>Kunststoffflächen reinigen</li>
+              <li>Innenfenster reinigen</li>
+              <li>Leichte Polsterreinigung</li>
+            </ul>
+            <a class="btn secondary" href="https://wa.me/41779127174" target="_blank" rel="noopener">Basic anfragen</a>
+          </article>
+
+          <article class="price-card featured">
+            <h3>Deep Interior</h3>
+            <p style="color: var(--muted);">Für sichtbaren Schmutz und stärkere Nutzung.</p>
+            <div class="price-tag">ab 120 CHF</div>
+            <ul>
+              <li>Alles aus Basic Interior</li>
+              <li>Intensivere Polsterreinigung</li>
+              <li>Teppiche gründlicher behandeln</li>
+              <li>Ritzen & Details genauer reinigen</li>
+              <li>Geruchsbehandlung möglich</li>
+            </ul>
+            <a class="btn" href="https://wa.me/41779127174" target="_blank" rel="noopener">Deep anfragen</a>
+          </article>
+
+          <article class="price-card">
+            <h3>Extras</h3>
+            <p style="color: var(--muted);">Für spezielle Wünsche.</p>
+            <div class="price-tag">+25 CHF <span>ab</span></div>
+            <ul>
+              <li>Lederpflege ab +25 CHF</li>
+              <li>SUV/Van Lederpflege ab +35 CHF</li>
+              <li>Dampfreinigung ab +30 CHF</li>
+              <li>Tierhaare nach Aufwand</li>
+              <li>Starker Geruch nach Aufwand</li>
+            </ul>
+            <a class="btn secondary" href="https://wa.me/41779127174" target="_blank" rel="noopener">Extras anfragen</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ablauf">
+      <div class="container">
+        <div class="section-head">
+          <h2>So läuft es ab.</h2>
+          <p>Einfach, klar und ohne unnötiges Hin und Her.</p>
+        </div>
+        <div class="steps">
+          <article class="step-card">
+            <h3>Anfrage senden</h3>
+            <p>Schick Fahrzeugmodell, Zustand und am besten 2–3 Fotos vom Innenraum.</p>
+          </article>
+          <article class="step-card">
+            <h3>Preis klären</h3>
+            <p>Du bekommst eine faire Einschätzung, bevor etwas gemacht wird.</p>
+          </article>
+          <article class="step-card">
+            <h3>Reinigung</h3>
+            <p>Der Innenraum wird sauber, systematisch und materialschonend behandelt.</p>
+          </article>
+          <article class="step-card">
+            <h3>Übergabe</h3>
+            <p>Du bekommst dein Auto sauber, gepflegt und bereit für den Alltag zurück.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Häufige Fragen.</h2>
+          <p>Die wichtigsten Punkte, bevor du buchst.</p>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3>Machst du auch Aussenwäsche?</h3>
+            <p>Der Fokus liegt auf Interior Detailing. Aussenarbeiten werden nur gemacht, wenn es sauber und umweltgerecht möglich ist.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Wie lange dauert eine Reinigung?</h3>
+            <p>Je nach Paket und Zustand ungefähr 1.5 bis 4 Stunden. Stark verschmutzte Fahrzeuge brauchen mehr Zeit.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Kannst du jeden Fleck entfernen?</h3>
+            <p>Nein. Wer das verspricht, redet Müll. Manche Flecken sind dauerhaft im Material. Ziel ist das bestmögliche Ergebnis ohne Schaden.</p>
+          </div>
+          <div class="faq-item">
+            <h3>Welche Produkte nutzt du?</h3>
+            <p>Hauptsächlich hochwertige Produkte von Koch Chemie und Sonax, passend zum jeweiligen Material.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div>
+            <h2>Bereit für einen sauberen Innenraum?</h2>
+            <p>
+              Schreib kurz, welches Auto du hast, wie stark der Innenraum verschmutzt ist und welches Paket dich interessiert. Fotos helfen für eine genauere Einschätzung.
+            </p>
+            <div class="hero-actions" style="margin-bottom: 0;">
+              <a class="btn" href="https://wa.me/41779127174" target="_blank" rel="noopener">WhatsApp öffnen</a>
+              <a class="btn secondary" href="mailto:hsdetailing.bern@gmail.com">E-Mail senden</a>
+            </div>
+          </div>
+          <div class="contact-box">
+            <div class="contact-line">
+              <span>Standort</span>
+              <strong>Bern & Umgebung</strong>
+            </div>
+            <div class="contact-line">
+              <span>WhatsApp</span>
+              <strong>+41 77 912 71 74</strong>
+            </div>
+            <div class="contact-line">
+              <span>E-Mail</span>
+              <strong>hsdetailing.bern@gmail.com</strong>
+            </div>
+            <div class="contact-line">
+              <span>Website</span>
+              <strong>hsdetailing-bern.ch</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> HS Detailing Bern. Alle Rechte vorbehalten.</span>
+      <span>Interior Detailing · Bern · Schweiz</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
