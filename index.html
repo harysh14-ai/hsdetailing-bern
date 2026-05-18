@@ -26,8 +26,8 @@
       --text: #f5f7fb;
       --muted: #a8b0bf;
       --line: rgba(255, 255, 255, 0.13);
-      --brand: #00aaff;
---brand-2: #0077ff;
+--brand: #00aaff;
+--brand2: #6bd6ff;
       --danger: #ff6b6b;
       --shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
       --radius: 28px;
@@ -726,27 +726,28 @@
       .steering { width: 190px; height: 190px; }
       section { padding: 68px 0; }
     }
-    .nav-logo-img {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  object-fit: cover;
-  display: block;
-}  .logo-hero {
-  display: grid;
-  place-items: center;
+.logo-hero {
   min-height: 560px;
+  border: 1px solid var(--line);
+  border-radius: 38px;
   background:
     radial-gradient(circle at center, rgba(0, 170, 255, 0.22), transparent 45%),
-    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.035));
+    linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.035));
+  box-shadow: 0 35px 100px rgba(0,0,0,.55);
+  padding: 34px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .hero-logo-img {
-  width: min(82%, 460px);
+  width: min(90%, 460px);
   max-height: 460px;
   object-fit: contain;
-  filter: drop-shadow(0 25px 60px rgba(0, 170, 255, 0.30));
-}  </style>
+  display: block;
+  filter: drop-shadow(0 25px 60px rgba(0, 170, 255, 0.35));
+}  
+  </style>
 </head>
 <body>
   <nav class="nav">
@@ -792,8 +793,8 @@
           </div>
         </div>
 
-  <div class="visual-card logo-hero" aria-label="HS Detailing Logo">
-  <img src="Logo.JPG" alt="HS Detailing Logo" class="hero-logo-img">
+<div class="logo-hero" aria-label="HS Detailing Logo Bereich">
+  <img src="./Logo.JPG?v=5" alt="HS Detailing Logo" class="hero-logo-img">
 </div>
       </div>
     </section>
