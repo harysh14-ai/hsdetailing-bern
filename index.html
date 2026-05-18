@@ -26,8 +26,8 @@
       --text: #f5f7fb;
       --muted: #a8b0bf;
       --line: rgba(255, 255, 255, 0.13);
-      --brand: #d7ff3f;
-      --brand-2: #9cffd1;
+      --brand: #00aaff;
+--brand-2: #0077ff;
       --danger: #ff6b6b;
       --shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
       --radius: 28px;
@@ -726,12 +726,19 @@
       .steering { width: 190px; height: 190px; }
       section { padding: 68px 0; }
     }
+    .nav-logo-img {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+}  
   </style>
 </head>
 <body>
   <nav class="nav">
     <a class="logo" href="#top" aria-label="HS Detailing Bern Startseite">
-      <span class="logo-mark">HS</span>
+    <img src="Logo.JPG" alt="HS Detailing Logo" class="nav-logo-img">
       <span>HS Detailing</span>
     </a>
     <div class="nav-links" aria-label="Hauptnavigation">
